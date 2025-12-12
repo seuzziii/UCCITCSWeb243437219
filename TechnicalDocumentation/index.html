@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Networking requires basic skills to set up new network or maintain and upgrade
+                    an existing one.You’ll have configure switches and end devices so that they are secure
+                    and perform effectively based on your requirements.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Modes">
+            <header>Modes</header>
+            <article>
+                <p><strong>EXEC Mode</strong> - Limited capabilities, mainly for basic monitoring commands.
+                <p><strong>Privileged EXEC Mode</strong> - Full access to all commands and features.
+                <p><strong>Global Configuration Mode</strong> - Used for making configuration changes to the
+                    device.
+                <p><strong>Interface Configuration Mode</strong> - Used to configure specific interfaces on the
+                    device.
+                <p><strong>Line Configuration Mode</strong> - Used to configure terminal lines for remote access.
+                </p>
+                <ul>
+                    <li>To enter Privileged EXEC Mode from User EXEC Mode, use the command: <code>enable</code></li>
+                    <li>To enter Global Configuration Mode from Privileged EXEC Mode, use the
+                        command:<code>configure terminal</code></li>
+                    <li>To exit from any configuration mode back to Privileged EXEC Mode, use the
+                        command:<code>end</code></li>
+                    <li>To go back to the previous configuration mode:<code>exit</code></li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Names">
+            <header>Names</header>
+            <article>
+                <p>The first configuration command on any device should be to give it a unique device name or
+                    hostname, if all switches in a network were left with their default names, it would be difficult
+                    to identify a specific device.</p>
+                <ul>
+                    <li>Use a name that reflects the device's role or location.</li>
+                    <li>Avoid using special characters or spaces; use hyphens or underscores instead.</li>
+                    <li>Keep the name concise but informative.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Passwords">
+            <header>Passwords</header>
+            <article>
+                <p>Passwords are essential for securing access to network devices. They help prevent unauthorized
+                    access and protect sensitive configuration data, usage of weak or easily guessed passwords
+                    continues
+                    to be the biggest security concern of organizations.</p>
+                <ul>
+                    <li>Use a combination of uppercase and lowercase letters, numbers, and special characters.</li>
+                    <li>Avoid using common words or easily guessable information.</li>
+                    <li>Change passwords regularly and avoid reusing old passwords.</li>
+                    <li>Implement multi-factor authentication where possible for added security.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Configuration">
+            <header>Configuration</header>
+            <article>
+                <p>To set the device name, enter Global Configuration Mode and use the following command:</p>
+                <pre><code>hostname &lt;device-name&gt;</code></pre>
+                <p>To set passwords for different access levels, use the following commands in Global Configuration
+                    Mode:</p>
+                <ol>
+                    <li>Set the console password:</li>
+                    <pre><code>line console 0</code></pre>
+                    <pre><code>password &lt;password&gt;</code></pre>
+                    <pre><code>login</code></pre>
+                    <li>Set the VTY (Telnet/SSH) password:</li>
+                    <pre><code>line vty 0 4</code></pre>
+                    <li>Set the enable password:</li>
+                    <pre><code>enable secret &lt;password&gt;</code></pre>
+                    <li>Encrypt the password</li>
+                    <pre><code>service password-encryption</code></pre>
+                    <li>Set banner message for warning</li>
+                    <pre><code>banner motd # &lt;message&gt; #</code></pre>
+                </ol>
+            </article>
+        </section>
+
+        <section class="main-section" id="References">
+            <header>References</header>
+            <article>
+                <p>All the documentation in this page is taken from
+                    <a href="https://www.networkstraining.com/basic-cisco-router-configuration-steps/"
+                        target="_blank">Networks Training - Harris Andrea</a>
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <nav id="navbar">
+        <header>Basic Network Configuration</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Modes">Modes</a></li>
+            <li><a class="nav-link" href="#Names">Names</a></li>
+            <li><a class="nav-link" href="#Passwords">Passwords</a></li>
+            <li><a class="nav-link" href="#Configuration">Configuration</a></li>
+            <li><a class="nav-link" href="#References">References</a></li>
+        </ul>
+</body>
+
+</html>
