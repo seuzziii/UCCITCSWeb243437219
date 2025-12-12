@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Guitar Survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 id="title">Guitar Survey Form</h1>
+  <p id="description">This is a survey for guitar players</p>
+
+  <form id="survey-form" method="post" action="thanks.html" method="get">
+    <fieldset>
+      <h3>Personal Information</h3>
+      <label id="name-label">Name: <input id="name" name="name-label" type="text" placeholder="Enter Your Name" required></label>
+      <label id="email-label">Email: <input id="email" name="email-label" type="email" placeholder="Enter Your Email" required></label>
+      <label id="number-label">Age: <input id="number" name="number-label" type="number" min="1" max="150" placeholder="Age" required></label>
+    </fieldset>
+
+    <fieldset>
+      <label for="dropdown">Which of the following is your favorite guitar type?
+        <select id="dropdown" name="dropdown">
+          <option value="">None</option>
+          <option value="">Stratocaster</option>
+          <option value="">Telecaster</option>
+          <option value="">Les Paul</option>
+          <option value="">Ibanez</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <h3>Which genre do you listen to the most?</h3>
+      <label for="classical"><input name="genre" type="radio" value="1">Classical</input></label>
+      <label for="country"><input name="genre" type="radio" value="2">Country</input></label>
+      <label for="metal"><input name="genre" type="radio" value="3">Metal</input></label>
+      <label for="jazz"><input name="genre" type="radio" value="4">Jazz</input></label>
+      <label for="rock"><input name="genre" type="radio" value="5">Rock</input></label>
+      <label for="pop"><input name="genre" type="radio" value="6">Pop</input></label>
+    </fieldset>
+
+    <fieldset>
+      <h3>What are some of your favorite guitar effects?</h3>
+      <label for="distortion"><input name="effects" type="checkbox" value="1">Distortion</lable>
+      <label for="compressor"><input name="effects" type="checkbox" value="2">Compressor</lable>
+      <label for="overdrive"><input name="effects" type="checkbox" value="3">Overdrive</lable>
+      <label for="reverb"><input name="effects" type="checkbox" value="4">Reverb</lable>
+      <label for="chorus"><input name="effects" type="checkbox" value="5">Chorus</lable>
+      <label for="wah"><input name="effects" type="checkbox" value="6">Wah</lable>
+    </fieldset>
+
+    <fieldset>
+      <label id="comments">
+        <textarea id="comments" name="comments" placeholder="Leave a comment!" rows="5" cols="50"></textarea>
+      </label>
+    </fieldset>
+
+    <input id="submit" type="submit">
+  </form>
+</body>
+
+</html>
